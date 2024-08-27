@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html2 lang="en">
+<html lang="en">
 
 <head>
   <title>DentaCare - Free Bootstrap 4 Template by Colorlib</title>
@@ -666,7 +666,7 @@
       <div class="row">
         <div class="col-md-4 mb-3">
           <div class="card">
-            <a href="#!" data-toggle="modal" data-target="#video1">
+            <a id="test">
               <img class="img-fluid" alt="100%x280" src="./images/fija/f1b.jpeg">
             </a>
             <div class="card-body">
@@ -1003,6 +1003,32 @@
     let menuImplate = document.getElementById('implante')
     let menuCadcam = document.getElementById('cadcam')
 
+    
+  //  let modal4 = document.getElementById("video4")
+  //   let test = document.getElementById('test')
+  //   let myModal = new bootstrap.Modal(document.getElementById('video4'))
+
+    $(document).ready(function() {
+    $('#test').click(function() {
+      window.open('exocat.html', '_blank', 'width=1200,height=600');
+      // fetch('exocat.html')
+      //       .then(response => response.text())
+      //       .then(data => {                
+      //           $('#exo').html(data)
+      //       });
+        //$('#video4').modal('show');
+        console.log("Modal abierto con Bootstrap 4");
+    });
+});
+
+    test.addEventListener('click', function(){
+     myModal.show()
+      console.log("holaaa");
+
+    })
+
+
+
     let gal_fija = document.getElementById('gal_fija')
     let gal_removible = document.getElementById('gal_removible')
 
@@ -1043,13 +1069,15 @@
     </div>
   </div>
 
-  <div tabindex="-1" aria-labelledby="modalf1" aria-hidden="true" class="modal fade" id="video1">
+  <div tabindex="-1" aria-labelledby="modalf1" aria-hidden="true" class="modal fade" id="video4">
     <div class="modal-dialog modal-lg ">
       <div class="modal-content">
-        <video id="modalVideo1" width="100%" autoplay loop>
+        <!-- <video id="modalVideo1" width="100%" autoplay loop>
           <source src="./images/cadcam/v1.mp4" type="video/mp4">
           Tu navegador no soporta el tag de video.
-      </video>
+      </video> -->
+       <div id="exo"></div>
+        <h1>este es el modal</h1>
       </div>
     </div>
   </div>
@@ -1083,14 +1111,17 @@
   let modalvideo2 = document.getElementById("modalVideo2")
 
   modal1.addEventListener('show.modal', function(){
-    modalvideo1.play()
+    console.log("algo");
+
+    //modalvideo1.play()
   })
 
   modal1.addEventListener('hidden.modal', function(){
     modalvideo1.pause()
   })
 
+
 </script>
 </body>
 
-</html2
+</html>
